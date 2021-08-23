@@ -1,24 +1,20 @@
 import './App.css';
+import Header from './components/header'
+import Hero from './components/hero'
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <div className="j-s">
-          <span>Brandon Norsworthy</span>
-        </div>
-        <div className="j-e">
-          <span>Brandon Norsworthy</span>
-        </div>
-      </header>
-      <section className="hero-background">
+      <Header />
+      <main>
+        <Hero />
+        {/* <div className="spacer hero-background-curves">
+        </div> */}
 
-      </section>
-      <section className="spacer hero-background-curves">
-      </section>
-      <section className="projects">
-        <p>projects</p>
-      </section>
+        <section className="projects" id="projects">
+          <p>projects</p>
+        </section>
+      </main>
     </div>
   );
 }
