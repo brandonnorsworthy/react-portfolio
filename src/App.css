@@ -1,13 +1,17 @@
-
+:root {
+  --primary-color: #d95c36;
+  --secondary-color: #de3b93;
+  --dark-color: #12192c;
+  --light-color: #293249;
+}
 
 * {
   font-family: 'Roboto', sans-serif;
-  scrollbar-color: #293249 #12192c;
+  scrollbar-color: var(--light-color) var(--dark-color);
 }
 
 body {
   margin: 0;
-  /* background-color: #12192c; */
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -19,7 +23,7 @@ header {
   justify-content: center;
   overflow-x: hidden;
   font-size: 22px;
-  color: #12192c;
+  color: var(--dark-color);
   position: fixed;
   width: 100%;
   top: 0;
@@ -27,8 +31,13 @@ header {
 }
 
 header a {
-  color: #12192c;
+  color: var(--dark-color);
   text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
 }
 
 section {
@@ -58,18 +67,11 @@ section {
 .hero-background {
   height: 25vh;
   width: 100%;
-  background-color: #12192c;
   margin-bottom: -1px;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
 }
 
 .main-content {
   display: flex;
-  background-color: #fff;
   justify-content: center;
   align-items: center;
   height: 105vh;
@@ -78,14 +80,13 @@ main {
 
 .myname {
   font-size: 128px;
-  color: #000;
+  color: var(--secondary-color);
   margin-top: -10vh;
   position: absolute;
   text-align: center;
 }
 
 .spacer svg {
-  /* aspect-ratio: 16/9; */
   margin-top: 25vh;
   width: 100%;
   height: 100vh;
@@ -101,10 +102,8 @@ main {
 }
 
 .projects {
-  /* margin-top: -16px; */
   width: 100%;
   margin-top: 100vh;
-  height: 100vh;
-  background: #d95b35;
+  background: rgba(217, 92, 54, 1);
   background: linear-gradient(0deg, rgba(217, 92, 54, 1), rgba(222, 59, 147, 1), 100%);
 }

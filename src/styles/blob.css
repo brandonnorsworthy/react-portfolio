@@ -1,11 +1,27 @@
 :root {
-    --blur-value: 7px;
-    --contrast-value: 15;
+    --blur-value: 8px;
+    --contrast-value: 50;
+    --brightness-value: 1;
+    --blur-background-color: #000;
+    --blur-text-color: #fff;
 }
 
 .main-content {
-    filter: contrast(var(--contrast-value));
-    -webkit-filter: contrast(var(--contrast-value));
+    filter: brightness(var(--brightness-value)) contrast(var(--contrast-value));
+    -webkit-filter: brightness(var(--brightness-value)) contrast(var(--contrast-value));
+    background-color: var(--blur-background-color);
+}
+
+.blob-filter {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    z-index: 10;
+    background-color: var(--light-color);
+    filter: opacity(30%);
+    position: absolute;
+    height: 105vh;
+    width: 100%;
 }
 
 .blur {
@@ -14,11 +30,15 @@
     position: absolute;
 }
 
+.myname {
+    color: var(--blur-text-color);
+}
+
 .blob1 {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: #000;
+    background: #de3b93;
     animation: move1 16s infinite;
 }
 
@@ -26,8 +46,7 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: #000;
-    filter: blur(var(--blur-value));
+    background: #673bde;
     animation: move2 42s infinite;
 }
 
@@ -44,7 +63,7 @@
     0% {
         transform: translateX(-150px) translateY(55vh);
     }
-    50% {
+    100% {
         transform: translateX(380px) translateY(-60vh);
     }
 }

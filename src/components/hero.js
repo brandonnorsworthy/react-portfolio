@@ -18,6 +18,9 @@ const hero = () => {
                     </path>
                 </svg>
             </div>
+            <div className="blob-filter">
+                &nbsp;
+            </div>
             <div className="main-content">
                 <p className="myname blur">
                     <b>Brandon Norsworthy</b>
@@ -25,7 +28,6 @@ const hero = () => {
                 <div className="blob1 blur">&nbsp;</div>
                 <div className="blob2 blur">&nbsp;</div>
             </div>
-
         </section>
     )
 }

@@ -2,6 +2,7 @@ import './App.css';
 import Header from './components/header'
 import Hero from './components/hero'
 import Projects from './components/projects'
+import About from './components/about'
 
 function App() {
   return (
@@ -9,10 +10,8 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <section className="projects" id="projects">
-          <h1>projects</h1>
-        </section>
         <Projects />
+        <About />
       </main>
     </div>
   );
