@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/blob.css'
 
 const hero = () => {
     return (

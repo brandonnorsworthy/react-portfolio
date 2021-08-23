@@ -1,38 +1,110 @@
-.App {
+
+
+* {
+  font-family: 'Roboto', sans-serif;
+  scrollbar-color: #293249 #12192c;
+}
+
+body {
+  margin: 0;
+  /* background-color: #12192c; */
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow-x: hidden;
+  font-size: 22px;
+  color: #12192c;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  font-weight: 500;
+}
+
+header a {
+  color: #12192c;
+  text-decoration: none;
+}
+
+section {
+  height: 100vh;
+}
+
+.j-s, .j-e {
+  width: 50%;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.j-s {
+  justify-content: flex-start;
+}
+
+.j-e {
+  text-decoration: none;
+  justify-content: flex-end;
+}
+
+.j-e>* {
+  margin-right: 15px;
+}
+
+.hero-background {
+  height: 25vh;
+  width: 100%;
+  background-color: #12192c;
+  margin-bottom: -1px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  display: flex;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  height: 105vh;
+  overflow: hidden;
+}
+
+.myname {
+  font-size: 128px;
+  color: #000;
+  margin-top: -10vh;
+  position: absolute;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.spacer svg {
+  /* aspect-ratio: 16/9; */
+  margin-top: 25vh;
+  width: 100%;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.spacer {
+  position: absolute;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.projects {
+  /* margin-top: -16px; */
+  width: 100%;
+  margin-top: 100vh;
+  height: 100vh;
+  background: #d95b35;
+  background: linear-gradient(0deg, rgba(217, 92, 54, 1), rgba(222, 59, 147, 1), 100%);
 }

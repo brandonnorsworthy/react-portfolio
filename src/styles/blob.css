@@ -1,0 +1,50 @@
+:root {
+    --blur-value: 7px;
+    --contrast-value: 15;
+}
+
+.main-content {
+    filter: contrast(var(--contrast-value));
+    -webkit-filter: contrast(var(--contrast-value));
+}
+
+.blur {
+    filter: blur(var(--blur-value));
+    -webkit-filter: blur(var(--blur-value));
+    position: absolute;
+}
+
+.blob1 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #000;
+    animation: move1 16s infinite;
+}
+
+.blob2 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #000;
+    filter: blur(var(--blur-value));
+    animation: move2 42s infinite;
+}
+
+@keyframes move1 {
+    0%, 100% {
+        transform: translateX(75px) translateY(-240px);
+    }
+    50% {
+        transform: translateX(-375px) translateY(-50px);
+    }
+}
+
+@keyframes move2 {
+    0% {
+        transform: translateX(-150px) translateY(55vh);
+    }
+    50% {
+        transform: translateX(380px) translateY(-60vh);
+    }
+}
