@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,4 +10,48 @@ code {
 
 * {
   font-family: 'Roboto', sans-serif;
+}
+
+.j-s, .j-e {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.j-s {
+  justify-content: flex-start;
+}
+
+.j-e {
+  justify-content: flex-end;
+}
+
+.hero-background {
+  height: 25vh;
+  width: 100%;
+
+  background-color: #12192c;
+  margin-bottom: -1px;  
+}
+
+.spacer {
+  background-color: #12192c;
+  aspect-ratio: 960/540;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-background-curves {
+  background-image: url('assets/svg/hero-background-curves.svg');
+}
+
+.projects {
+  margin-top: -16px;  
+  width: 100%;
+
+  height: 100vh;
+  background: rgb(222, 59, 147);
+  background: linear-gradient(0deg, rgba(222, 59, 147, 1) 0%, rgba(217, 91, 53, 1) 100%);
 }
