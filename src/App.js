@@ -3,6 +3,7 @@ import Header from './components/header'
 import Hero from './components/hero'
 import Projects from './components/projects'
 import About from './components/about'
+import Sandbox from './components/sandbox'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Hero />
         <Projects />
         <About />
+        <Sandbox />
       </main>
     </div>
   );

@@ -61,9 +61,9 @@
 
 @keyframes move2 {
     0% {
-        transform: translateX(-150px) translateY(55vh);
+        transform: translateX(-150px) translateY(60vh);
     }
     100% {
-        transform: translateX(380px) translateY(-60vh);
+        transform: translateX(380px) translateY(-70vh);
     }
 }
