@@ -1,1 +1,1 @@
-deployment: https://brandonnorsworthy.github.io/react-portfolio/
+deployment: https://brandonnorsworthy.herokuapp.com/
