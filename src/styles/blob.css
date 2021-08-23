@@ -1,6 +1,6 @@
 :root {
-    --blur-value: 8px;
-    --contrast-value: 50;
+    --blur-value: 5px;
+    --contrast-value: 25;
     --brightness-value: 1;
     --blur-background-color: #000;
     --blur-text-color: #fff;
@@ -38,7 +38,7 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: #de3b93;
+    background: #de3b7f;
     animation: move1 16s infinite;
 }
 
@@ -46,7 +46,7 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: #673bde;
+    background: #3bdec3;
     animation: move2 42s infinite;
 }
 
