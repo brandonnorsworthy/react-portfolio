@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/header'
 import Hero from './components/hero'
+import Projects from './components/projects'
 
 function App() {
   return (
@@ -8,15 +9,10 @@ function App() {
       <Header />
       <main>
         <Hero />
-        {/* <div className="spacer hero-background-curves">
-        </div> */}
-
         <section className="projects" id="projects">
           <h1>projects</h1>
         </section>
-        <section>
-          <h1>onther section</h1>
-        </section>
+        <Projects />
       </main>
     </div>
   );
