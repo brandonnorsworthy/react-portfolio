@@ -24,6 +24,8 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  overflow-x: hidden;
+
   font-size: 22px;
   color: #12192c;
   position: fixed;
@@ -35,6 +37,10 @@ header {
 header a {
   color: #12192c;
   text-decoration: none;
+}
+
+section {
+  height: 100vh;
 }
 
 .j-s, .j-e {
@@ -89,16 +95,22 @@ main {
 .myname {
   font-size: 128px;
   color: #000;
+  margin-top: -10vh;
+  position: absolute;
   text-align: center;
 }
 
-/* .spacer svg {
+.spacer svg {
+  /* aspect-ratio: 16/9; */
+  margin-top: 25vh;
   width: 100%;
-} */
+  height: 100vh;
+}
 
 .spacer {
   position: absolute;
-  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
   z-index: 100;
   width: 100%;
   height: 100vh;
@@ -107,7 +119,7 @@ main {
 .projects {
   /* margin-top: -16px; */
   width: 100%;
-  margin-top: 94vh;
+  margin-top: 100vh;
   height: 100vh;
   background: #d95b35;
   background: linear-gradient(0deg, rgba(217, 92, 54, 1),  rgba(222, 59, 147, 1), 100%);
@@ -153,19 +165,19 @@ main {
 }
 
 @keyframes move1 {
-  0% {
-    transform: translateX(75px) translateY(-50vh);
+  0%,100% {
+    transform: translateX(75px) translateY(-240px);
   }
-  100% {
-    transform: translateX(75px) translateY(65vh);
+  50% {
+    transform: translateX(-375px) translateY(-50px);
   }
 }
 
 @keyframes move2 {
-  0% {
-    transform: translateX(-150px) translateY(-55vh);
+  0%,100% {
+    transform: translateX(-150px) translateY(-270px);
   }
-  100% {
-    transform: translateX(-150px) translateY(65vh);
+  50% {
+    transform: translateX(380px) translateY(40px);
   }
 }

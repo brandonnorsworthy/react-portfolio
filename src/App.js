@@ -12,7 +12,10 @@ function App() {
         </div> */}
 
         <section className="projects" id="projects">
-          <p>projects</p>
+          <h1>projects</h1>
+        </section>
+        <section>
+          <h1>onther section</h1>
         </section>
       </main>
     </div>
