@@ -1,6 +1,6 @@
 import React from 'react'
 
-const sandbox = () => {
+function Sandbox() {
     return (
         <section className="sandbox" id="sandbox">
             <div>
@@ -10,4 +10,4 @@ const sandbox = () => {
     )
 }
 
-export default sandbox
+export default Sandbox

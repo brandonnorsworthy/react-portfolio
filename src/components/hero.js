@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/blob.css'
 
-const hero = () => {
+function Hero() {
     return (
         <section className="hero-background" id="landing">
             <div className="spacer">
@@ -32,4 +32,4 @@ const hero = () => {
     )
 }
 
-export default hero
+export default Hero

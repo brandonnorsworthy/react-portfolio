@@ -1,6 +1,6 @@
 import React from 'react'
 
-const projects = () => {
+function Projects() {
     return (
         <section className="about" id="about">
             <div>
@@ -10,4 +10,4 @@ const projects = () => {
     )
 }
 
-export default projects
+export default Projects
