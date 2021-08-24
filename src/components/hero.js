@@ -1,10 +1,11 @@
 import React from 'react'
 import '../styles/blob.css'
 
-const numberOfBlobs = 3
-const baseSpeed = 10
-let blobs = []
-let blobElements = []
+const numberOfBlobs = 3;
+const baseSpeed = 10;
+let blobs = [];
+let blobElements = [];
+let ranOnce = false;
 
 class Blob {
     constructor(blobNumber) {
@@ -31,13 +32,15 @@ function createRGB(number) {
 }
 
 function createBlobs() {
+    if (ranOnce) { return (<></>) } else { ranOnce = true; }
+
     console.log('creating blobs')
     // let container = document.getElementById("blob-container");
     for (let index = 1; index < numberOfBlobs + 1; index++) {
         console.log('creating blob #', index)
 
         var tempBlobElement = document.createElement('div')
-        var tempBlob = new Blob(index + 2)
+        var tempBlob = new Blob(index)
 
         tempBlobElement.style.borderRadius = '50%'
         tempBlobElement.classList.add('blur')
@@ -55,14 +58,14 @@ function createBlobs() {
         blobs.push(tempBlob)
         // container.appendChild(tempBlobElement)
 
-        console.log('Created blob', document.getElementById("blob" + index))
+        console.log('Created blob')
     }
 
     console.log('All blobs', blobs)
 }
 
 
-function Hero() {
+function Hero(props) {
 
     return (
         <section className="hero-background" id="landing">
@@ -87,7 +90,9 @@ function Hero() {
                 <p className="myname blur">
                     <b>Brandon Norsworthy</b>
                 </p>
-                {createBlobs()}
+                {
+                    createBlobs()
+                }
                 {/* <div className="blob1 blur">&nbsp;</div> */}
                 {/* <div className="blob2 blur">&nbsp;</div> */}
             </div>
