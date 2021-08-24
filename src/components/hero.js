@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import '../styles/blob.css'
 
-const numberOfBlobs = 3;
-const baseSpeed = 100; //lowest speed every blob recieves
+const numberOfBlobs = 20;
+const baseSpeed = 20; //lowest speed every blob recieves
 let blobs = []; //all the blob objects
 let blobElements = []; //all the temporary dom blobs
 let ranOnce = false; //prevents dev duplicating blobs
@@ -40,19 +40,40 @@ class Blob {
         this.color = createRGB();
         //vector has a x and a y, the speed can go from negative 1/2 of base speed up to 1/2 base speed in any direction
         this.vector = { x: Math.floor(Math.random() * baseSpeed - baseSpeed / 2), y: Math.floor(Math.random() * baseSpeed - baseSpeed / 2) }
+        this.currentLocation = { x: 0, y: 0 }
         this.element = document.getElementById(`blob` + blobNumber)
     }
 
     move() {
-        console.log(this.vector.y, this.vector.x)
-        // this.element.style.left = parseFloat(this.element.style.left) + this.vector.x + 'px';
-        // this.element.style.top = parseFloat(this.element.style.top) + this.vector.y + 'px';
-        // this.element.style.transform = `translate(${this.vector.x + 'px'},${this.vector.y + 'px'})`
-        this.element.style["-webkit-transform"] = `translate(${this.vector.x + 'px'},${this.vector.y + 'px'})`;
-        this.element.style["-moz-transform"] = `translate(${this.vector.x + 'px'},${this.vector.y + 'px'})`;
-        this.element.style["-ms-transform"] = `translate(${this.vector.x + 'px'},${this.vector.y + 'px'})`;
-        this.element.style["-o-transform"] = `translate(${this.vector.x + 'px'},${this.vector.y + 'px'})`;
-        this.element.style["transform"] = `translate(${this.vector.x + 'px'},${this.vector.y + 'px'})`;
+        console.log("Viewport", document.documentElement.clientHeight / 2, document.documentElement.clientWidth / 2)
+        console.log("Location", this.currentLocation.y, this.currentLocation.x)
+
+        //if the current location is beyond height / 2 or below negative height / 2 (because we start in middle) added on the size to account for not going over
+        if (this.currentLocation.y > (document.documentElement.clientHeight / 2) - this.size / 2 ||
+            this.currentLocation.y < -(document.documentElement.clientHeight / 2) + this.size / 2) {
+            console.log('hit y wall')
+            //if the vector is negative make postive else make negative
+            this.vector.y < 0 ? this.vector.y = -(this.vector.y) : this.vector.y = 0 - this.vector.y
+        }
+
+        //if the current location is beyond width / 2 or below negative width / 2 (because we start in middle) added on the size to account for not going over
+        if (this.currentLocation.x > (document.documentElement.clientWidth / 2) - this.size / 2 ||
+            this.currentLocation.x < -(document.documentElement.clientWidth / 2) + this.size / 2) {
+            console.log('hit x wall')
+            //if the vector is negative make postive else make negative
+            this.vector.x < 0 ? this.vector.x = -(this.vector.x) : this.vector.x = 0 - this.vector.x
+        }
+
+        //push elements in the direction they need to go
+        this.element.style["-webkit-transform"] = `translate(${(this.vector.x + this.currentLocation.x) + 'px'},${(this.vector.y + this.currentLocation.y) + 'px'})`;
+        this.element.style["-moz-transform"] = `translate(${(this.vector.x + this.currentLocation.x) + 'px'},${(this.vector.y + this.currentLocation.y) + 'px'})`;
+        this.element.style["-ms-transform"] = `translate(${(this.vector.x + this.currentLocation.x) + 'px'},${(this.vector.y + this.currentLocation.y) + 'px'})`;
+        this.element.style["-o-transform"] = `translate(${(this.vector.x + this.currentLocation.x) + 'px'},${(this.vector.y + this.currentLocation.y) + 'px'})`;
+        this.element.style["transform"] = `translate(${(this.vector.x + this.currentLocation.x) + 'px'},${(this.vector.y + this.currentLocation.y) + 'px'})`;
+
+        //update to the new location
+        this.currentLocation.x += this.vector.x
+        this.currentLocation.y += this.vector.y
     }
 }
 
@@ -75,7 +96,7 @@ let i = 0;
 async function moveBlobs() {
     i++;
     if (i > 200) { return; }
-    sleep(1000).then(() => {
+    sleep(250).then(() => {
         console.log("looped", i)
         blobs.map(blob => blob.move());
 
