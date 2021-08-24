@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-var data = require('../assets/json/projects.json');
+import React from 'react';
+var projects = require('../assets/json/projects.json');
 
 function importAll(r) {
     return r.keys().map(r);
@@ -11,11 +11,11 @@ function Projects() {
     console.log('images', images)
 
     function createProjectCards() {
-        for (var i = 0; i < data.length; i++) {
-            var obj = data[i];
+        for (var i = 0; i < projects.length; i++) {
+            var obj = projects[i];
             console.log(`Name: ${obj} ${'../assets/projects/' + obj.name + '.png'}`);
             return (
-                <div class="project">
+                <div className="project">
                     <h1>{obj.name}</h1>
                     <p>{obj.description}</p>
                     <img src={images[0].default} alt="project demo screenshot"></img>
@@ -32,7 +32,15 @@ function Projects() {
                 <h1>onther section</h1>
             </div>
             <div>
-                {createProjectCards()}
+                {projects.map(project => (
+                    <div className="project">
+                        <h1>{project.name}</h1>
+                        <p>{project.description}</p>
+                        <img src={images[0].default} alt="project demo screenshot"></img>
+                        <a href={project.deployment} target="_blank" rel="noreferrer">Deployment</a>
+                        <a href={project.repository} target="_blank" rel="noreferrer">Repository</a>
+                    </div>
+                ))}
             </div>
         </section>
     )
