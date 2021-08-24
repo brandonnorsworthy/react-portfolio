@@ -108,6 +108,20 @@ section {
 	background: linear-gradient(0deg, rgba(217, 92, 54, 1), rgba(222, 59, 147, 1), 100%);
 }
 
+.project {
+	width: 200px;
+	border: 1px solid #000;
+}
+
+.project img {
+	width: 180px;
+	object-fit: cover;
+}
+
+.project * {
+	padding: 5px;
+}
+
 section div h1 {
 	text-align: center;
 }
