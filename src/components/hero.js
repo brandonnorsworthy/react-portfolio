@@ -2,28 +2,32 @@ import React, { Component } from 'react'
 import '../styles/blob.css'
 
 const numberOfBlobs = 3;
-const baseSpeed = 10;
-let blobs = [];
-let blobElements = [];
-let ranOnce = false;
+const baseSpeed = 10; //lowest speed every blob recieves
+let blobs = []; //all the blob objects
+let blobElements = []; //all the temporary dom blobs
+let ranOnce = false; //prevents dev duplicating blobs
 
 class Blob {
     constructor(blobNumber) {
+        //used to refer to the blob its like an id
         this.blobNumber = blobNumber;
         this.size = Math.floor((Math.random() * 75) + 75)
         this.color = createRGB();
+        //vector has a x and a y, the speed can go from negative 1/2 of base speed up to 1/2 base speed in any direction
         this.vector = { x: Math.floor(Math.random() * baseSpeed - baseSpeed / 2), y: Math.floor(Math.random() * baseSpeed - baseSpeed / 2) }
         this.element = document.getElementById(`blob` + blobNumber)
     }
 
     move() {
-        document.getElementById('blob' + this.blobNumber).style.left = parseFloat(getComputedStyle(this).left) + this.vector.x + 'px';
+        this.element.style.left = parseFloat(this.element.style.left) + this.vector.x + 'px';
+        this.element.style.top = parseFloat(this.element.style.top) + this.vector.y + 'px';
     }
 }
 
 function createRGB(number) {
     var rgbObj = { r: 0, g: 0, b: 0 };
 
+    //if the blobs number is %3 then main color is red, %2 main color is green, %1 is blue
     number % 3 === 0 ? rgbObj = { r: 255, g: Math.floor(Math.random() * 255), b: Math.floor(Math.random() * 255) }
         : number % 2 === 0 ? rgbObj = { r: Math.floor(Math.random() * 255), g: 255, b: Math.floor(Math.random() * 255) }
             : rgbObj = { r: Math.floor(Math.random() * 255), g: Math.floor(Math.random() * 255), b: 255 }
@@ -32,45 +36,59 @@ function createRGB(number) {
 }
 
 function createBlobs() {
+    //prevent dev running twice and creating duplicate blobs
     if (ranOnce) { return (<></>) } else { ranOnce = true; }
 
-    console.log('creating blobs')
-    // let container = document.getElementById("blob-container");
+    //create how ever many blobs are preset
     for (let index = 1; index < numberOfBlobs + 1; index++) {
-        console.log('creating blob #', index)
-
         var tempBlobElement = document.createElement('div')
         var tempBlob = new Blob(index)
 
+        //basic needs for a blob to work and look blobby
         tempBlobElement.style.borderRadius = '50%'
         tempBlobElement.classList.add('blur')
-        console.log('blob#', index, 'added blur class')
+        //names the blob with the blob number so we can refer to it later
         tempBlobElement.classList.add(`blob${index}`)
 
-        console.log('tempBlob.color', tempBlob.color)
+        //uses the blobs class generated attributes to style the blob
         tempBlobElement.style.backgroundColor = "rgb(" + tempBlob.color.r + ", " + tempBlob.color.g + ", " + tempBlob.color.b + ")";
         tempBlobElement.style.width = String(tempBlob.size) + 'px'
         tempBlobElement.style.height = String(tempBlob.size) + 'px'
 
-        console.log(tempBlobElement)
-
+        //add the new blobs into the global blob array which we refer to later
         blobElements.push(tempBlobElement)
         blobs.push(tempBlob)
-        // container.appendChild(tempBlobElement)
-
-        console.log('Created blob')
     }
-    console.log('All blobs', blobs)
-    console.log('All blobs', blobElements)
+}
+
+function moveBlobs() {
+    for (let index = 0; index < 50; index++) {
+        setTimeout(function(){}, 1000)
+        blobs.map(blob => blob.move());
+    }
 }
 
 class Hero extends Component {
     componentDidMount() {
-        console.log('component did mount!!!!!!!!!!!!!!!!!!!!!!!!')
+        //after the component renders add all the blobs onto the dom
         var container = document.getElementById("blob-container")
+        //map over the global blobElements variable that gets created earlier
         blobElements.map(blobElement => (
             container.appendChild(blobElement)
         ))
+        for (let child of container.children) {
+            //look through all the divs in the blob container
+            if (child.nodeName === 'DIV') {
+                //split class 'blob12' into just the number '12'
+                let temp = child.classList[1].substr(4, child.classList[1].length)
+                //use the blob number to find the corresponding class '12' == blobNumber
+                let found = blobs.find(element => element.blobNumber === Number(temp))
+                //once we find the class let the class know who belongs to it so we can move that div around
+                found.element = child
+            }
+        }
+        //after we created all the blobs go move them
+        moveBlobs();
     }
 
     render() {
@@ -97,11 +115,7 @@ class Hero extends Component {
                     <p className="myname blur">
                         <b>Brandon Norsworthy</b>
                     </p>
-                    {
-                        createBlobs()
-                    }
-                    {/* <div className="blob1 blur">&nbsp;</div> */}
-                    {/* <div className="blob2 blur">&nbsp;</div> */}
+                    {createBlobs()}
                 </div>
             </section>
         )

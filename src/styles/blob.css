@@ -1,6 +1,6 @@
 :root {
-    --blur-value: 5px;
-    --contrast-value: 25;
+    --blur-value: 6px;
+    --contrast-value: 30;
     --brightness-value: 1;
     --blur-background-color: #000;
     --blur-text-color: #fff;
@@ -60,10 +60,10 @@
 }
 
 @keyframes move2 {
-    0% {
+    0%, 100% {
         transform: translateX(-150px) translateY(40vh);
     }
-    100% {
+    50% {
         transform: translateX(380px) translateY(-40vh);
     }
 }
