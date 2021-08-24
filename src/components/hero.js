@@ -3,6 +3,7 @@ import '../styles/blob.css'
 
 const numberOfBlobs = 20;
 const baseSpeed = 20; //lowest speed every blob recieves
+const sizeVariance = 2
 let blobs = []; //all the blob objects
 let blobElements = []; //all the temporary dom blobs
 let ranOnce = false; //prevents dev duplicating blobs
@@ -45,20 +46,20 @@ class Blob {
     }
 
     move() {
-        console.log("Viewport", document.documentElement.clientHeight / 2, document.documentElement.clientWidth / 2)
-        console.log("Location", this.currentLocation.y, this.currentLocation.x)
+        // console.log("Viewport", document.documentElement.clientHeight / 2, document.documentElement.clientWidth / 2)
+        // console.log("Location", this.currentLocation.y, this.currentLocation.x)
 
         //if the current location is beyond height / 2 or below negative height / 2 (because we start in middle) added on the size to account for not going over
-        if (this.currentLocation.y > (document.documentElement.clientHeight / 2) - this.size / 2 ||
-            this.currentLocation.y < -(document.documentElement.clientHeight / 2) + this.size / 2) {
+        if (this.currentLocation.y > (document.documentElement.clientHeight / 2) - this.size / 4 ||
+            this.currentLocation.y < -(document.documentElement.clientHeight / 2) + this.size / 4) {
             console.log('hit y wall')
             //if the vector is negative make postive else make negative
             this.vector.y < 0 ? this.vector.y = -(this.vector.y) : this.vector.y = 0 - this.vector.y
         }
 
         //if the current location is beyond width / 2 or below negative width / 2 (because we start in middle) added on the size to account for not going over
-        if (this.currentLocation.x > (document.documentElement.clientWidth / 2) - this.size / 2 ||
-            this.currentLocation.x < -(document.documentElement.clientWidth / 2) + this.size / 2) {
+        if (this.currentLocation.x > (document.documentElement.clientWidth / 2) - this.size / 4 ||
+            this.currentLocation.x < -(document.documentElement.clientWidth / 2) + this.size / 4) {
             console.log('hit x wall')
             //if the vector is negative make postive else make negative
             this.vector.x < 0 ? this.vector.x = -(this.vector.x) : this.vector.x = 0 - this.vector.x
@@ -95,9 +96,9 @@ function sleep(ms) {
 let i = 0;
 async function moveBlobs() {
     i++;
-    if (i > 200) { return; }
+    if (i > 20000) { return; }
     sleep(250).then(() => {
-        console.log("looped", i)
+        console.log("loop", i)
         blobs.map(blob => blob.move());
 
         moveBlobs()
