@@ -2,38 +2,10 @@ import React, { Component } from 'react'
 import '../styles/blob.css'
 
 const numberOfBlobs = 3;
-const baseSpeed = 10; //lowest speed every blob recieves
+const baseSpeed = 100; //lowest speed every blob recieves
 let blobs = []; //all the blob objects
 let blobElements = []; //all the temporary dom blobs
 let ranOnce = false; //prevents dev duplicating blobs
-
-class Blob {
-    constructor(blobNumber) {
-        //used to refer to the blob its like an id
-        this.blobNumber = blobNumber;
-        this.size = Math.floor((Math.random() * 75) + 75)
-        this.color = createRGB();
-        //vector has a x and a y, the speed can go from negative 1/2 of base speed up to 1/2 base speed in any direction
-        this.vector = { x: Math.floor(Math.random() * baseSpeed - baseSpeed / 2), y: Math.floor(Math.random() * baseSpeed - baseSpeed / 2) }
-        this.element = document.getElementById(`blob` + blobNumber)
-    }
-
-    move() {
-        this.element.style.left = parseFloat(this.element.style.left) + this.vector.x + 'px';
-        this.element.style.top = parseFloat(this.element.style.top) + this.vector.y + 'px';
-    }
-}
-
-function createRGB(number) {
-    var rgbObj = { r: 0, g: 0, b: 0 };
-
-    //if the blobs number is %3 then main color is red, %2 main color is green, %1 is blue
-    number % 3 === 0 ? rgbObj = { r: 255, g: Math.floor(Math.random() * 255), b: Math.floor(Math.random() * 255) }
-        : number % 2 === 0 ? rgbObj = { r: Math.floor(Math.random() * 255), g: 255, b: Math.floor(Math.random() * 255) }
-            : rgbObj = { r: Math.floor(Math.random() * 255), g: Math.floor(Math.random() * 255), b: 255 }
-
-    return rgbObj
-}
 
 function createBlobs() {
     //prevent dev running twice and creating duplicate blobs
@@ -60,12 +32,55 @@ function createBlobs() {
         blobs.push(tempBlob)
     }
 }
-
-function moveBlobs() {
-    for (let index = 0; index < 50; index++) {
-        setTimeout(function(){}, 1000)
-        blobs.map(blob => blob.move());
+class Blob {
+    constructor(blobNumber) {
+        //used to refer to the blob its like an id
+        this.blobNumber = blobNumber;
+        this.size = Math.floor((Math.random() * 75) + 75)
+        this.color = createRGB();
+        //vector has a x and a y, the speed can go from negative 1/2 of base speed up to 1/2 base speed in any direction
+        this.vector = { x: Math.floor(Math.random() * baseSpeed - baseSpeed / 2), y: Math.floor(Math.random() * baseSpeed - baseSpeed / 2) }
+        this.element = document.getElementById(`blob` + blobNumber)
     }
+
+    move() {
+        console.log(this.vector.y, this.vector.x)
+        // this.element.style.left = parseFloat(this.element.style.left) + this.vector.x + 'px';
+        // this.element.style.top = parseFloat(this.element.style.top) + this.vector.y + 'px';
+        // this.element.style.transform = `translate(${this.vector.x + 'px'},${this.vector.y + 'px'})`
+        this.element.style["-webkit-transform"] = `translate(${this.vector.x + 'px'},${this.vector.y + 'px'})`;
+        this.element.style["-moz-transform"] = `translate(${this.vector.x + 'px'},${this.vector.y + 'px'})`;
+        this.element.style["-ms-transform"] = `translate(${this.vector.x + 'px'},${this.vector.y + 'px'})`;
+        this.element.style["-o-transform"] = `translate(${this.vector.x + 'px'},${this.vector.y + 'px'})`;
+        this.element.style["transform"] = `translate(${this.vector.x + 'px'},${this.vector.y + 'px'})`;
+    }
+}
+
+function createRGB(number) {
+    var rgbObj = { r: 0, g: 0, b: 0 };
+
+    //if the blobs number is %3 then main color is red, %2 main color is green, %1 is blue
+    number % 3 === 0 ? rgbObj = { r: 255, g: Math.floor(Math.random() * 255), b: Math.floor(Math.random() * 255) }
+        : number % 2 === 0 ? rgbObj = { r: Math.floor(Math.random() * 255), g: 255, b: Math.floor(Math.random() * 255) }
+            : rgbObj = { r: Math.floor(Math.random() * 255), g: Math.floor(Math.random() * 255), b: 255 }
+
+    return rgbObj
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+let i = 0;
+async function moveBlobs() {
+    i++;
+    if (i > 200) { return; }
+    sleep(1000).then(() => {
+        console.log("looped", i)
+        blobs.map(blob => blob.move());
+
+        moveBlobs()
+    });
 }
 
 class Hero extends Component {

@@ -28,6 +28,7 @@
     filter: blur(var(--blur-value));
     -webkit-filter: blur(var(--blur-value));
     position: absolute;
+    transition:all .5s ease-out;
 }
 
 .myname {
@@ -39,7 +40,6 @@
     height: 75px;
     border-radius: 50%;
     background: rgb(255, 59, 127);
-    animation: move1 16s infinite;
 }
 
 .blob2 {
@@ -47,23 +47,4 @@
     height: 75px;
     border-radius: 50%;
     background: rgb(0, 255, 136);
-    animation: move2 42s infinite;
-}
-
-@keyframes move1 {
-    0%, 100% {
-        transform: translateX(75px) translateY(-240px);
-    }
-    50% {
-        transform: translateX(-375px) translateY(-50px);
-    }
-}
-
-@keyframes move2 {
-    0%, 100% {
-        transform: translateX(-150px) translateY(40vh);
-    }
-    50% {
-        transform: translateX(380px) translateY(-40vh);
-    }
 }
