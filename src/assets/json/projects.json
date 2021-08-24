@@ -112,7 +112,32 @@
             "backend-server",
             "json-db"
         ],
-        "deployment": "https://brandonnorsworthy.github.io/uta-team-profile-generator/",
-        "repository": "https://github.com/brandonnorsworthy/uta-team-profile-generator"
+        "deployment": "https://uta-note-taker.herokuapp.com/",
+        "repository": "https://github.com/brandonnorsworthy/uta-note-taker"
+    },
+    {
+        "name": "uta-employee-tracker",
+        "description": "This application uses an Express.js back end and saves and retrieves note data from a JSON file. Giving the front-end routes to the backend to send and receive data.",
+        "technologies": [
+            "nodejs",
+            "mysql",
+            "express",
+            "sequelize",
+            "inquirer"
+        ],
+        "repository": "https://github.com/brandonnorsworthy/uta-employee-tracker"
+    },
+    {
+        "name": "uta-e-commerce-back-end",
+        "description": "Back end for an e-commerce site built by adding on top of starter code. Configured a working Express.js API to use Sequelize to interact with a MySQL database.",
+        "technologies": [
+            "javascript",
+            "mysql",
+            "express",
+            "routing",
+            "sequelize",
+            "backend-server"
+        ],
+        "repository": "https://github.com/brandonnorsworthy/uta-e-commerce-back-end"
     }
 ]
