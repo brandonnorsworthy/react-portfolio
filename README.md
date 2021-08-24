@@ -1,1 +1,1 @@
-deployment: https://brandonnorsworthy.herokuapp.com/
+https://www.brandonnorsworthy.com/
