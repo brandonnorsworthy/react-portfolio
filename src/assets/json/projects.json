@@ -1,23 +1,5 @@
 [
     {
-        "name": "uta-pwa-budget-tracker",
-        "description": "",
-        "deployment": "https://uta-budget-tracker.herokuapp.com/",
-        "repository": "https://github.com/brandonnorsworthy/uta-pwa-budget-tracker"
-    },
-    {
-        "name": "uta-fitness-tracker",
-        "description": "View, create and track daily workouts. Able to log multiple exercises in a workout on a given day. Also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, able to track my distance traveled.",
-        "deployment": "https://uta-fitness-tracker.herokuapp.com",
-        "repository": "https://github.com/brandonnorsworthy/uta-fitness-tracker"
-    },
-    {
-        "name": "meet-up",
-        "description": "Meet Up is a full stack web application that can be used to create events anywhere in the world or just browse current events going on. You can create a small event anywhere to try and make new friends or create just a micro event!",
-        "deployment": "https://uta-meet-up.herokuapp.com/",
-        "repository": "https://github.com/brandonnorsworthy/meet-up"
-    },
-    {
         "name": "portfolio-website",
         "description": "Personal portfolio capturing all my projects with in-depth descriptions of projects!",
         "deployment": "https://brandonnorsworthy.github.io/portfolio-website/",
@@ -139,5 +121,29 @@
             "backend-server"
         ],
         "repository": "https://github.com/brandonnorsworthy/uta-e-commerce-back-end"
+    },
+    {
+        "name": "uta-tech-blog",
+        "description": "",
+        "technologies": [],
+        "repository": "https://github.com/brandonnorsworthy/uta-tech-blog"
+    },
+    {
+        "name": "meet-up",
+        "description": "Meet Up is a full stack web application that can be used to create events anywhere in the world or just browse current events going on. You can create a small event anywhere to try and make new friends or create just a micro event!",
+        "deployment": "https://uta-meet-up.herokuapp.com/",
+        "repository": "https://github.com/brandonnorsworthy/meet-up"
+    },
+    {
+        "name": "uta-fitness-tracker",
+        "description": "View, create and track daily workouts. Able to log multiple exercises in a workout on a given day. Also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, able to track my distance traveled.",
+        "deployment": "https://uta-fitness-tracker.herokuapp.com",
+        "repository": "https://github.com/brandonnorsworthy/uta-fitness-tracker"
+    },
+    {
+        "name": "uta-pwa-budget-tracker",
+        "description": "",
+        "deployment": "https://uta-budget-tracker.herokuapp.com/",
+        "repository": "https://github.com/brandonnorsworthy/uta-pwa-budget-tracker"
     }
 ]
