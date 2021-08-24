@@ -20,7 +20,7 @@ function Projects() {
                         <h1>{project.name}</h1>
                         <img src={images[0].default} alt="project demo screenshot"></img>
                         <p>{project.description}</p>
-                        <a href={project.deployment} target="_blank" rel="noreferrer">Deployed</a>
+                        {project.deployment ? <a href={project.deployment} target="_blank" rel="noreferrer">Deployed</a> : <></>}
                         <a href={project.repository} target="_blank" rel="noreferrer">Code</a>
                     </div>
                 ))}

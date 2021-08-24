@@ -60,5 +60,59 @@
         ],
         "deployment": "https://brandonnorsworthy.github.io/uta-weather-dashboard/",
         "repository": "https://github.com/brandonnorsworthy/uta-weather-dashboard"
+    },
+    {
+        "name": "pet-seeker",
+        "description": "Pet Seeker is a user-friendly website that can help you find your new four-legged friend! The site searches the web to bring thousands of adoptable pets right to users' fingertips. Then, users can like or dislike these pets, thereby creating a shortlist of their liked pets.",
+        "technologies": [
+            "css",
+            "jquery",
+            " js",
+            "bulma-css-framework",
+            "petfinder-api",
+            "dogapi"
+        ],
+        "deployment": "https://brandonnorsworthy.github.io/pet-seeker/",
+        "repository": "https://github.com/brandonnorsworthy/pet-seeker"
+    },
+    {
+        "name": "uta-readme-generator",
+        "description": "You can quickly and easily create a README file by using a command-line application to generate one. This allows the project creator to devote more time to working on the project.",
+        "technologies": [
+            "markdown",
+            "node",
+            "fs",
+            "inquirer",
+            "generated"
+        ],
+        "repository": "https://github.com/brandonnorsworthy/uta-readme-generator"
+    },
+    {
+        "name": "uta-team-profile-generator",
+        "description": "Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person",
+        "technologies": [
+            "css",
+            "html",
+            "node",
+            "jest",
+            "classes",
+            "inquirer"
+        ],
+        "deployment": "https://brandonnorsworthy.github.io/uta-team-profile-generator/",
+        "repository": "https://github.com/brandonnorsworthy/uta-team-profile-generator"
+    },
+    {
+        "name": "uta-note-taker",
+        "description": "This application uses an Express.js back end and saves and retrieves note data from a JSON file. Giving the front-end routes to the backend to send and receive data.",
+        "technologies": [
+            "javascript",
+            "heroku",
+            "routing",
+            "expressjs",
+            "backend-server",
+            "json-db"
+        ],
+        "deployment": "https://brandonnorsworthy.github.io/uta-team-profile-generator/",
+        "repository": "https://github.com/brandonnorsworthy/uta-team-profile-generator"
     }
 ]
