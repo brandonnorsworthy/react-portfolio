@@ -1,7 +1,61 @@
 import React from 'react'
 import '../styles/blob.css'
 
+const numberOfBlobs = 1
+const baseSpeed = 10
+let blobs = []
+
 function Hero() {
+    class Blob {
+        constructor(blobNumber) {
+            this.blobNumber = blobNumber;
+            this.size = Math.floor((Math.random() * 75) + 75)
+            this.color = createRGB();
+            this.vector = { x: Math.floor(Math.random() * baseSpeed - baseSpeed / 2), y: Math.floor(Math.random() * baseSpeed - baseSpeed / 2) }
+            this.element = document.getElementById(`blob` + blobNumber)
+        }
+
+        move() {
+            document.getElementById('blob' + this.blobNumber).style.left = parseFloat(getComputedStyle(this).left) + this.vector.x + 'px';
+        }
+    }
+
+    function createRGB(number) {
+        var rgbObj = { r: 0, g: 0, b: 0 };
+
+        number % 3 === 0 ? rgbObj = { r: 255, g: Math.floor(Math.random * 255), b: Math.floor(Math.random * 255) }
+            : number % 2 === 0 ? rgbObj = { r: Math.floor(Math.random * 255), g: 255, b: Math.floor(Math.random * 255) }
+                : rgbObj = { r: Math.floor(Math.random * 255), g: Math.floor(Math.random * 255), b: 255 }
+
+        return rgbObj
+    }
+
+    function createBlobs() {
+        console.log('creating blobs')
+        let container = document.getElementById("blob-container");
+        for (let index = 0; index < numberOfBlobs; index++) {
+            var tempBlobElement = document.createElement('div')
+            var tempBlob = new Blob(index + 2)
+
+            tempBlobElement.style.borderRadius = '50%'
+            tempBlobElement.classList.add('blob')
+
+            console.log('tempBlob.color', tempBlob.color)
+            tempBlobElement.style.backgroundColor = tempBlob.color
+            tempBlobElement.style.width = String(tempBlob.size) + 'px'
+            tempBlobElement.style.height = String(tempBlob.size) + 'px'
+
+            console.log(tempBlobElement)
+
+            blobs.push(tempBlob)
+            container.appendChild(tempBlobElement)
+
+            console.log('Created blob', document.getElementById("blob" + index))
+        }
+
+        console.log('All blobs', blobs)
+    }
+
     return (
         <section className="hero-background" id="landing">
             <div className="spacer">
@@ -21,12 +75,13 @@ function Hero() {
             <div className="blob-filter">
                 &nbsp;
             </div>
-            <div className="main-content">
+            <div className="main-content" id="blob-container">
                 <p className="myname blur">
                     <b>Brandon Norsworthy</b>
                 </p>
+                {createBlobs()}
                 <div className="blob1 blur">&nbsp;</div>
-                <div className="blob2 blur">&nbsp;</div>
+                {/* <div className="blob2 blur">&nbsp;</div> */}
             </div>
         </section>
     )

@@ -7,7 +7,7 @@ function importAll(r) {
 const images = importAll(require.context('../assets/projects/', false, /\.(png|jpe?g|svg)$/));
 
 function Projects() {
-    console.log('images', images)
+    // console.log('images', images)
 
     return (
         <section className="projects" id="projects">
