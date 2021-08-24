@@ -1,0 +1,64 @@
+[
+    {
+        "name": "uta-pwa-budget-tracker",
+        "description": "",
+        "deployment": "https://uta-budget-tracker.herokuapp.com/",
+        "repository": "https://github.com/brandonnorsworthy/uta-pwa-budget-tracker"
+    },
+    {
+        "name": "uta-fitness-tracker",
+        "description": "View, create and track daily workouts. Able to log multiple exercises in a workout on a given day. Also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, able to track my distance traveled.",
+        "deployment": "https://uta-fitness-tracker.herokuapp.com",
+        "repository": "https://github.com/brandonnorsworthy/uta-fitness-tracker"
+    },
+    {
+        "name": "meet-up",
+        "description": "Meet Up is a full stack web application that can be used to create events anywhere in the world or just browse current events going on. You can create a small event anywhere to try and make new friends or create just a micro event!",
+        "deployment": "https://uta-meet-up.herokuapp.com/",
+        "repository": "https://github.com/brandonnorsworthy/meet-up"
+    },
+    {
+        "name": "portfolio-website",
+        "description": "Personal portfolio capturing all my projects with in-depth descriptions of projects!",
+        "deployment": "https://brandonnorsworthy.github.io/portfolio-website/",
+        "repository": "https://github.com/brandonnorsworthy/portfolio-website"
+    },
+    {
+        "name": "uta-password-generator",
+        "description": "Generates random passwords built using characters based on criteria that was selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript!",
+        "deployment": "https://brandonnorsworthy.github.io/uta-password-generator/",
+        "repository": "https://github.com/brandonnorsworthy/uta-password-generator"
+    },
+    {
+        "name": "uta-code-quiz",
+        "description": "Timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript.",
+        "deployment": "https://brandonnorsworthy.github.io/uta-code-quiz/",
+        "repository": "https://github.com/brandonnorsworthy/uta-code-quiz"
+    },
+    {
+        "name": "uta-work-day-schduler",
+        "description": "Simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app runs in the browser and feature dynamically updated HTML and CSS powered by jQuery. ",
+        "technologies": [
+            "javascript",
+            "css",
+            "jquery",
+            "calendar",
+            "localstorage"
+        ],
+        "deployment": "https://brandonnorsworthy.github.io/uta-work-day-schduler/",
+        "repository": "https://github.com/brandonnorsworthy/uta-work-day-schduler"
+    },
+    {
+        "name": "uta-weather-dashboard",
+        "description": "Weather Dashboard using Open Weather API that runs in the browser and features dynamically updated HTML and CSS.",
+        "technologies": [
+            "javascript",
+            "bootstrap",
+            "localstorage",
+            "openweather-api",
+            "onecallapi"
+        ],
+        "deployment": "https://brandonnorsworthy.github.io/uta-weather-dashboard/",
+        "repository": "https://github.com/brandonnorsworthy/uta-weather-dashboard"
+    }
+]
