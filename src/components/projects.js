@@ -16,7 +16,7 @@ function Projects() {
             </div>
             <div className="projects-container">
                 {projects.map(project => (
-                    <div className="project">
+                    <div className="project" key={project.name}>
                         <h1>{project.name}</h1>
                         <img src={images[0].default} alt="project demo screenshot"></img>
                         <p>{project.description}</p>
