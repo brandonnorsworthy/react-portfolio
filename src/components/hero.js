@@ -1,60 +1,68 @@
 import React from 'react'
 import '../styles/blob.css'
 
-const numberOfBlobs = 1
+const numberOfBlobs = 3
 const baseSpeed = 10
 let blobs = []
+let blobElements = []
+
+class Blob {
+    constructor(blobNumber) {
+        this.blobNumber = blobNumber;
+        this.size = Math.floor((Math.random() * 75) + 75)
+        this.color = createRGB();
+        this.vector = { x: Math.floor(Math.random() * baseSpeed - baseSpeed / 2), y: Math.floor(Math.random() * baseSpeed - baseSpeed / 2) }
+        this.element = document.getElementById(`blob` + blobNumber)
+    }
+
+    move() {
+        document.getElementById('blob' + this.blobNumber).style.left = parseFloat(getComputedStyle(this).left) + this.vector.x + 'px';
+    }
+}
+
+function createRGB(number) {
+    var rgbObj = { r: 0, g: 0, b: 0 };
+
+    number % 3 === 0 ? rgbObj = { r: 255, g: Math.floor(Math.random() * 255), b: Math.floor(Math.random() * 255) }
+        : number % 2 === 0 ? rgbObj = { r: Math.floor(Math.random() * 255), g: 255, b: Math.floor(Math.random() * 255) }
+            : rgbObj = { r: Math.floor(Math.random() * 255), g: Math.floor(Math.random() * 255), b: 255 }
+
+    return rgbObj
+}
+
+function createBlobs() {
+    console.log('creating blobs')
+    // let container = document.getElementById("blob-container");
+    for (let index = 1; index < numberOfBlobs + 1; index++) {
+        console.log('creating blob #', index)
+
+        var tempBlobElement = document.createElement('div')
+        var tempBlob = new Blob(index + 2)
+
+        tempBlobElement.style.borderRadius = '50%'
+        tempBlobElement.classList.add('blur')
+        console.log('blob#', index, 'added blur class')
+        tempBlobElement.classList.add(`blob${index}`)
+
+        console.log('tempBlob.color', tempBlob.color)
+        tempBlobElement.style.backgroundColor = "rgb(" + tempBlob.color.r + ", " + tempBlob.color.g + ", " + tempBlob.color.b + ")";
+        tempBlobElement.style.width = String(tempBlob.size) + 'px'
+        tempBlobElement.style.height = String(tempBlob.size) + 'px'
+
+        console.log(tempBlobElement)
+
+        blobElements.push(tempBlobElement)
+        blobs.push(tempBlob)
+        // container.appendChild(tempBlobElement)
+
+        console.log('Created blob', document.getElementById("blob" + index))
+    }
+
+    console.log('All blobs', blobs)
+}
+
 
 function Hero() {
-    class Blob {
-        constructor(blobNumber) {
-            this.blobNumber = blobNumber;
-            this.size = Math.floor((Math.random() * 75) + 75)
-            this.color = createRGB();
-            this.vector = { x: Math.floor(Math.random() * baseSpeed - baseSpeed / 2), y: Math.floor(Math.random() * baseSpeed - baseSpeed / 2) }
-            this.element = document.getElementById(`blob` + blobNumber)
-        }
-
-        move() {
-            document.getElementById('blob' + this.blobNumber).style.left = parseFloat(getComputedStyle(this).left) + this.vector.x + 'px';
-        }
-    }
-
-    function createRGB(number) {
-        var rgbObj = { r: 0, g: 0, b: 0 };
-
-        number % 3 === 0 ? rgbObj = { r: 255, g: Math.floor(Math.random * 255), b: Math.floor(Math.random * 255) }
-            : number % 2 === 0 ? rgbObj = { r: Math.floor(Math.random * 255), g: 255, b: Math.floor(Math.random * 255) }
-                : rgbObj = { r: Math.floor(Math.random * 255), g: Math.floor(Math.random * 255), b: 255 }
-
-        return rgbObj
-    }
-
-    function createBlobs() {
-        console.log('creating blobs')
-        let container = document.getElementById("blob-container");
-        for (let index = 0; index < numberOfBlobs; index++) {
-            var tempBlobElement = document.createElement('div')
-            var tempBlob = new Blob(index + 2)
-
-            tempBlobElement.style.borderRadius = '50%'
-            tempBlobElement.classList.add('blob')
-
-            console.log('tempBlob.color', tempBlob.color)
-            tempBlobElement.style.backgroundColor = tempBlob.color
-            tempBlobElement.style.width = String(tempBlob.size) + 'px'
-            tempBlobElement.style.height = String(tempBlob.size) + 'px'
-
-            console.log(tempBlobElement)
-
-            blobs.push(tempBlob)
-            container.appendChild(tempBlobElement)
-
-            console.log('Created blob', document.getElementById("blob" + index))
-        }
-
-        console.log('All blobs', blobs)
-    }
 
     return (
         <section className="hero-background" id="landing">
@@ -80,7 +88,7 @@ function Hero() {
                     <b>Brandon Norsworthy</b>
                 </p>
                 {createBlobs()}
-                <div className="blob1 blur">&nbsp;</div>
+                {/* <div className="blob1 blur">&nbsp;</div> */}
                 {/* <div className="blob2 blur">&nbsp;</div> */}
             </div>
         </section>
