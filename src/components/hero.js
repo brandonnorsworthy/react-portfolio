@@ -3,7 +3,7 @@ import '../styles/blob.css'
 
 const numberOfBlobs = 20;
 const baseSpeed = 20; //lowest speed every blob recieves
-const sizeVariance = 75
+const sizeVariance = 75;
 let blobs = []; //all the blob objects
 let blobElements = []; //all the temporary dom blobs
 let ranOnce = false; //prevents dev duplicating blobs

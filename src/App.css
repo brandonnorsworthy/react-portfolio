@@ -131,6 +131,8 @@ section {
 	align-items: center;
 	justify-content: flex-start;
 	flex-direction: column;
+	background-color: var(--light-color);
+	color: #fff;
 }
 
 .project img {
@@ -140,6 +142,21 @@ section {
 
 .project h1 {
 	font-size: 18px;
+}
+
+.project div {
+	margin-top: 10px;
+}
+
+.project div * {
+	text-decoration: none;
+	color: var(--primary-color);
+	font-weight: bold;
+	padding: 0px 5px;
+}
+
+.project div *:hover {
+	color: var(--secondary-color)
 }
 
 section div h1 {
