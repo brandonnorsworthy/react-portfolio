@@ -33,6 +33,7 @@ function createBlobs() {
         blobs.push(tempBlob)
     }
 }
+
 class Blob {
     constructor(blobNumber) {
         //used to refer to the blob its like an id
