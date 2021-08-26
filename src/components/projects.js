@@ -1,8 +1,8 @@
 import React from 'react';
 const projects = require('../assets/json/projects.json');
 
-function importAll(r) {
-    return r.keys().map(r);
+function importAll(images) {
+    return images.keys().map(images);
 }
 const images = importAll(require.context('../assets/projects/', false, /\.(png|jpe?g|svg)$/));
 

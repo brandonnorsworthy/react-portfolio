@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import '../styles/blob.css'
 
 const numberOfBlobs = 20;
-const baseSpeed = 30; //lowest speed every blob recieves
+const baseSpeed = 20; //lowest speed every blob recieves
 const sizeVariance = 75
 let blobs = []; //all the blob objects
 let blobElements = []; //all the temporary dom blobs
