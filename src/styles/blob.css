@@ -4,6 +4,7 @@
     --brightness-value: 1;
     --blur-background-color: #000;
     --blur-text-color: #fff;
+    --blob-color: rgb(204, 149, 76);
 }
 
 .main-content {

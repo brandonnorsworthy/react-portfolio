@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import '../styles/blob.css'
 
 const numberOfBlobs = 20;
-const baseSpeed = 20; //lowest speed every blob recieves
-const sizeVariance = 2
+const baseSpeed = 30; //lowest speed every blob recieves
+const sizeVariance = 75
 let blobs = []; //all the blob objects
 let blobElements = []; //all the temporary dom blobs
 let ranOnce = false; //prevents dev duplicating blobs
@@ -38,8 +38,8 @@ class Blob {
     constructor(blobNumber) {
         //used to refer to the blob its like an id
         this.blobNumber = blobNumber;
-        this.size = Math.floor((Math.random() * 75) + 75)
-        this.color = createRGB();
+        this.size = Math.floor((Math.random() * sizeVariance) + sizeVariance)
+        this.color = createRGB(blobNumber);
         //vector has a x and a y, the speed can go from negative 1/2 of base speed up to 1/2 base speed in any direction
         this.vector = { x: Math.floor(Math.random() * baseSpeed - baseSpeed / 2), y: Math.floor(Math.random() * baseSpeed - baseSpeed / 2) }
         this.currentLocation = { x: 0, y: 0 }
@@ -53,7 +53,6 @@ class Blob {
         //if the current location is beyond height / 2 or below negative height / 2 (because we start in middle) added on the size to account for not going over
         if (this.currentLocation.y > (document.documentElement.clientHeight / 2) - this.size / 4 ||
             this.currentLocation.y < -(document.documentElement.clientHeight / 2) + this.size / 4) {
-            console.log('hit y wall')
             //if the vector is negative make postive else make negative
             this.vector.y < 0 ? this.vector.y = -(this.vector.y) : this.vector.y = 0 - this.vector.y
         }
@@ -61,7 +60,6 @@ class Blob {
         //if the current location is beyond width / 2 or below negative width / 2 (because we start in middle) added on the size to account for not going over
         if (this.currentLocation.x > (document.documentElement.clientWidth / 2) - this.size / 4 ||
             this.currentLocation.x < -(document.documentElement.clientWidth / 2) + this.size / 4) {
-            console.log('hit x wall')
             //if the vector is negative make postive else make negative
             this.vector.x < 0 ? this.vector.x = -(this.vector.x) : this.vector.x = 0 - this.vector.x
         }
@@ -80,12 +78,24 @@ class Blob {
 }
 
 function createRGB(number) {
+    const colorRangeLimit = 30;
     var rgbObj = { r: 0, g: 0, b: 0 };
+
+    console.log(number, number % 3, number + 1 % 3)
 
     //if the blobs number is %3 then main color is red, %2 main color is green, %1 is blue
     number % 3 === 0 ? rgbObj = { r: 255, g: Math.floor(Math.random() * 255), b: Math.floor(Math.random() * 255) }
         : number % 2 === 0 ? rgbObj = { r: Math.floor(Math.random() * 255), g: 255, b: Math.floor(Math.random() * 255) }
             : rgbObj = { r: Math.floor(Math.random() * 255), g: Math.floor(Math.random() * 255), b: 255 }
+
+    //prevent white blobs
+    if (rgbObj.r < rgbObj.g + colorRangeLimit && rgbObj.r > rgbObj.g - colorRangeLimit) {
+        rgbObj.r = 0
+    } else if (rgbObj.g < rgbObj.b + colorRangeLimit && rgbObj.g > rgbObj.b - colorRangeLimit) {
+        rgbObj.g = 0
+    } else if (rgbObj.b < rgbObj.r + colorRangeLimit && rgbObj.b > rgbObj.r - colorRangeLimit) {
+        rgbObj.b = 0
+    }
 
     return rgbObj
 }
@@ -99,7 +109,6 @@ async function moveBlobs() {
     i++;
     if (i > 20000) { return; }
     sleep(250).then(() => {
-        console.log("loop", i)
         blobs.map(blob => blob.move());
 
         moveBlobs()
