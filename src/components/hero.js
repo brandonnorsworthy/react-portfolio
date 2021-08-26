@@ -81,8 +81,6 @@ function createRGB(number) {
     const colorRangeLimit = 30;
     var rgbObj = { r: 0, g: 0, b: 0 };
 
-    console.log(number, number % 3, number + 1 % 3)
-
     //if the blobs number is %3 then main color is red, %2 main color is green, %1 is blue
     number % 3 === 0 ? rgbObj = { r: 255, g: Math.floor(Math.random() * 255), b: Math.floor(Math.random() * 255) }
         : number % 2 === 0 ? rgbObj = { r: Math.floor(Math.random() * 255), g: 255, b: Math.floor(Math.random() * 255) }
