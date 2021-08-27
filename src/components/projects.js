@@ -45,7 +45,7 @@ function Projects() {
                             {project.deployment ? <a href={project.deployment} target="_blank" rel="noreferrer">Deployed</a> : <></>}
                             < a href={project.repository} target="_blank" rel="noreferrer" > Code</a>
                         </div>
-                        <p>{project.description}</p>
+                        {/* <p>{project.description}</p> */}
                     </div>
                 ))
                 }

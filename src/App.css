@@ -1,8 +1,11 @@
 :root {
-	--primary-color: #d95c36;
-	--secondary-color: #de3b93;
-	--dark-color: #12192c;
-	--light-color: #293249;
+	--dark-color: #0c0f16;
+	--shaded-color: #12192c;
+	--light-color: #17344d;
+	--secondary-color: #11526c;
+	--highlight-color: #fa911c;
+	--primary-color: #18939a;
+	--white-color: #f5f2df;
 }
 
 * {
@@ -12,6 +15,8 @@
 
 body {
 	margin: 0;
+	max-width: 100vw;
+	width: 100vw;
 	overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -80,16 +85,9 @@ section {
 
 .myname {
 	font-size: 128px;
-	color: var(--secondary-color);
 	margin-top: -10vh;
 	position: absolute;
 	text-align: center;
-}
-
-.spacer svg {
-	margin-top: 25vh;
-	width: 100%;
-	height: 100vh;
 }
 
 .spacer {
@@ -101,14 +99,25 @@ section {
 	height: 100vh;
 }
 
+.spacer svg {
+	margin-top: 25vh;
+	width: 100%;
+	height: 100vh;
+}
+
+.about .spacer svg {
+	margin-top: 0px;
+}
+
 .projects {
 	width: 100%;
+	min-height: 100vh;
 	margin-top: 100vh;
-	background: rgba(217, 92, 54, 1);
-	background: linear-gradient(0deg, rgba(217, 92, 54, 1), rgba(222, 59, 147, 1), 100%);
+	background: var(--primary-color);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	height: auto;
 	padding-bottom: 150px;
 }
@@ -116,27 +125,25 @@ section {
 .projects-container {
 	display: flex;
 	justify-content: center;
-	width: 80%;
+	max-width: 100vh;
 	margin-left: 10%;
 	margin-right: 10%;
 	flex-wrap: wrap;
 }
 
 .project {
+	margin: 5px;
 	width: 250px;
-	border-right: 2px solid var(--dark-color);
-	border-bottom: 2px solid var(--dark-color);
-	padding: 5px;
 	display: flex;
+	border-radius: 1px solid var(--dark-color);
 	align-items: center;
 	justify-content: flex-start;
 	flex-direction: column;
-	background-color: var(--light-color);
-	color: #fff;
 }
 
 .project img {
-	width: 180px;
+	width: 250px;
+	height: 250px;
 	object-fit: cover;
 }
 
@@ -150,15 +157,21 @@ section {
 
 .project div * {
 	text-decoration: none;
-	color: var(--primary-color);
+	color: var(--white-color);
 	font-weight: bold;
 	padding: 0px 5px;
 }
 
 .project div *:hover {
-	color: var(--secondary-color)
+	color: var(--primary-color)
 }
 
 section div h1 {
 	text-align: center;
+	color: var(--white-color);
+	font-size: 50px;
+}
+
+.about {
+	background-color: var(--secondary-color);
 }
