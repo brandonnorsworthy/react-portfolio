@@ -26,6 +26,12 @@ function Projects() {
                     <a href="https://github.com/brandonnorsworthy" target="_blank" rel="noreferrer">
                         <img src={github} alt="github icon"></img>
                     </a>
+                    <a>
+                        brandonknorsworthy@gmail.com
+                    </a>
+                    <a>
+                        resume
+                    </a>
                 </div>
             </div>
         </section>

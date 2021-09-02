@@ -62,12 +62,25 @@ section {
 	justify-content: flex-start;
 }
 
+#extra-content {
+	display: flex;
+	align-items: center;
+}
+
+#extra-content a {
+	margin-right: 15px;
+}
+
+#extra-content a:last-child {
+	margin-right: 0px !important;
+}
+
 .j-e {
 	text-decoration: none;
 	justify-content: flex-end;
 }
 
-.j-e>* {
+.j-e a {
 	margin-right: 15px;
 }
 
