@@ -277,11 +277,10 @@ footer a {
 	#extra-content {
 		display: none;
 	}
-	.spacer {
-		margin-top: -1px;
+	.spacer:first-of-type {
+		margin-bottom: -1px;
 	}
 	.projects-container {
-		margin-top: -1px;
 		margin-left: 2.5vw;
 		margin-right: 2.5vw;
 	}
@@ -290,6 +289,9 @@ footer a {
 	}
 	.not-mobile-resposive {
 		display: none;
+	}
+	.about .spacer {
+		margin-top: -1px;
 	}
 	.about-content {
 		margin-top: 20vh;

@@ -82,9 +82,10 @@ function createRGB(number) {
     var rgbObj = { r: 0, g: 0, b: 0 };
 
     //if the blobs number is %3 then main color is red, %2 main color is green, %1 is blue
-    number % 3 === 0 ? rgbObj = { r: 255, g: Math.floor(Math.random() * 255), b: Math.floor(Math.random() * 255) }
-        : number % 2 === 0 ? rgbObj = { r: Math.floor(Math.random() * 255), g: 255, b: Math.floor(Math.random() * 255) }
-            : rgbObj = { r: Math.floor(Math.random() * 255), g: Math.floor(Math.random() * 255), b: 255 }
+    // number % 3 === 0 ? rgbObj = { r: 255, g: Math.floor(Math.random() * 200), b: Math.floor(Math.random() * 200) }
+    // : number % 2 === 0 ? rgbObj = { r: Math.floor(Math.random() * 200), g: 255, b: Math.floor(Math.random() * 200) }
+    // : rgbObj = { r: Math.floor(Math.random() * 200), g: Math.floor(Math.random() * 200), b: 255 }
+    rgbObj = { r: Math.floor(Math.random() * 200), g: Math.floor(Math.random() * 200), b: 255 }
 
     //prevent white blobs
     if (rgbObj.r < rgbObj.g + colorRangeLimit && rgbObj.r > rgbObj.g - colorRangeLimit) {
