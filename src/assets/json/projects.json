@@ -3,25 +3,29 @@
         "name": "eridium",
         "description": "",
         "deployment": "https://eridium.herokuapp.com/",
-        "repository": "https://github.com/brandonnorsworthy/eridium"
+        "repository": "https://github.com/brandonnorsworthy/eridium",
+        "mobile": "true"
     },
     {
         "name": "uta-pwa-budget-tracker",
         "description": "",
         "deployment": "https://uta-budget-tracker.herokuapp.com/",
-        "repository": "https://github.com/brandonnorsworthy/uta-pwa-budget-tracker"
+        "repository": "https://github.com/brandonnorsworthy/uta-pwa-budget-tracker",
+        "mobile": "true"
     },
     {
         "name": "uta-fitness-tracker",
         "description": "View, create and track daily workouts. Able to log multiple exercises in a workout on a given day. Also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, able to track my distance traveled.",
         "deployment": "https://uta-fitness-tracker.herokuapp.com",
-        "repository": "https://github.com/brandonnorsworthy/uta-fitness-tracker"
+        "repository": "https://github.com/brandonnorsworthy/uta-fitness-tracker",
+        "mobile": "true"
     },
     {
         "name": "meet-up",
         "description": "Meet Up is a full stack web application that can be used to create events anywhere in the world or just browse current events going on. You can create a small event anywhere to try and make new friends or create just a micro event!",
         "deployment": "https://uta-meet-up.herokuapp.com/",
-        "repository": "https://github.com/brandonnorsworthy/meet-up"
+        "repository": "https://github.com/brandonnorsworthy/meet-up",
+        "mobile": "false"
     },
     {
         "name": "uta-e-commerce-back-end",
@@ -34,7 +38,8 @@
             "sequelize",
             "backend-server"
         ],
-        "repository": "https://github.com/brandonnorsworthy/uta-e-commerce-back-end"
+        "repository": "https://github.com/brandonnorsworthy/uta-e-commerce-back-end",
+        "mobile": "false"
     },
     {
         "name": "uta-employee-tracker",
@@ -46,7 +51,8 @@
             "sequelize",
             "inquirer"
         ],
-        "repository": "https://github.com/brandonnorsworthy/uta-employee-tracker"
+        "repository": "https://github.com/brandonnorsworthy/uta-employee-tracker",
+        "mobile": "false"
     },
     {
         "name": "uta-note-taker",
@@ -60,7 +66,8 @@
             "json-db"
         ],
         "deployment": "https://uta-note-taker.herokuapp.com/",
-        "repository": "https://github.com/brandonnorsworthy/uta-note-taker"
+        "repository": "https://github.com/brandonnorsworthy/uta-note-taker",
+        "mobile": "true"
     },
     {
         "name": "uta-team-profile-generator",
@@ -74,7 +81,8 @@
             "inquirer"
         ],
         "deployment": "https://brandonnorsworthy.github.io/uta-team-profile-generator/",
-        "repository": "https://github.com/brandonnorsworthy/uta-team-profile-generator"
+        "repository": "https://github.com/brandonnorsworthy/uta-team-profile-generator",
+        "mobile": "true"
     },
     {
         "name": "uta-readme-generator",
@@ -86,7 +94,8 @@
             "inquirer",
             "generated"
         ],
-        "repository": "https://github.com/brandonnorsworthy/uta-readme-generator"
+        "repository": "https://github.com/brandonnorsworthy/uta-readme-generator",
+        "mobile": "false"
     },
     {
         "name": "pet-seeker",
@@ -100,7 +109,8 @@
             "dogapi"
         ],
         "deployment": "https://brandonnorsworthy.github.io/pet-seeker/",
-        "repository": "https://github.com/brandonnorsworthy/pet-seeker"
+        "repository": "https://github.com/brandonnorsworthy/pet-seeker",
+        "mobile": "true"
     },
     {
         "name": "uta-weather-dashboard",
@@ -126,24 +136,28 @@
             "localstorage"
         ],
         "deployment": "https://brandonnorsworthy.github.io/uta-work-day-schduler/",
-        "repository": "https://github.com/brandonnorsworthy/uta-work-day-schduler"
+        "repository": "https://github.com/brandonnorsworthy/uta-work-day-schduler",
+        "mobile": "false"
     },
     {
         "name": "uta-code-quiz",
         "description": "Timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript.",
         "deployment": "https://brandonnorsworthy.github.io/uta-code-quiz/",
-        "repository": "https://github.com/brandonnorsworthy/uta-code-quiz"
+        "repository": "https://github.com/brandonnorsworthy/uta-code-quiz",
+        "mobile": "true"
     },
     {
         "name": "uta-password-generator",
         "description": "Generates random passwords built using characters based on criteria that was selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript!",
         "deployment": "https://brandonnorsworthy.github.io/uta-password-generator/",
-        "repository": "https://github.com/brandonnorsworthy/uta-password-generator"
+        "repository": "https://github.com/brandonnorsworthy/uta-password-generator",
+        "mobile": "true"
     },
     {
         "name": "portfolio-website",
         "description": "Personal portfolio capturing all my projects with in-depth descriptions of projects!",
         "deployment": "https://brandonnorsworthy.github.io/portfolio-website/",
-        "repository": "https://github.com/brandonnorsworthy/portfolio-website"
+        "repository": "https://github.com/brandonnorsworthy/portfolio-website",
+        "mobile": "true"
     }
 ]

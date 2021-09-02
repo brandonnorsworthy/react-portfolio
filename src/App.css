@@ -3,7 +3,7 @@
 	--shaded-color: #12192c;
 	--light-color: #17344d;
 	--secondary-color: #11526c;
-	--highlight-color: #fa911c;
+	--highlight-color: #00ffff;
 	--primary-color: #18939a;
 	--white-color: #f5f2df;
 }
@@ -85,6 +85,10 @@ section {
 	margin-right: 15px;
 }
 
+.j-e a:last-child {
+	margin-right: 0px !important;
+}
+
 .hero-background {
 	height: 25vh;
 	width: 100%;
@@ -164,7 +168,8 @@ section {
 }
 
 .project h1 {
-	font-size: 18px;
+	font-size: 22px;
+	font-weight: bold;
 }
 
 .project div {
@@ -180,6 +185,11 @@ section {
 
 .project div *:hover {
 	color: var(--secondary-color)
+}
+
+.project a {
+	color: var(--highlight-color);
+	font-weight: bold;
 }
 
 section div h1 {
@@ -258,15 +268,22 @@ footer a {
 	.j-s {
 		display: none;
 	}
-
 	.j-e {
 		justify-content: center;
 		height: 35px;
 		width: 100%;
 	}
-
 	#extra-content {
 		display: none;
 	}
-
+	.projects-container {
+		margin-left: 2.5vw;
+		margin-right: 2.5vw;
+	}
+	.project img, .project {
+		width: 95vw;
+	}
+	.not-mobile-resposive {
+		display: none;
+	}
 }
