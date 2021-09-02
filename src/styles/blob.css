@@ -10,6 +10,7 @@
     filter: brightness(var(--brightness-value)) contrast(var(--contrast-value));
     -webkit-filter: brightness(var(--brightness-value)) contrast(var(--contrast-value));
     background-color: var(--blur-background-color);
+    overflow: hidden;
 }
 
 .blob-filter {

@@ -91,9 +91,10 @@ section {
 }
 
 .hero-background {
-	height: 25vh;
+	height: 125vh;
 	width: 100%;
 	margin-bottom: -1px;
+	overflow: hidden;
 }
 
 .main-content {
@@ -133,7 +134,6 @@ section {
 .projects {
 	width: 100%;
 	min-height: 100vh;
-	margin-top: 100vh;
 	background: var(--primary-color);
 	display: flex;
 	flex-direction: column;
