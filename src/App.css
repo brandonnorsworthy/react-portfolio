@@ -231,6 +231,7 @@ section div h1 {
 .information {
 	display: flex;
 	justify-content: space-between;
+	padding-bottom: 35px;
 }
 
 .information a {
