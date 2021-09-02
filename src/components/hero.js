@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import '../styles/blob.css'
 
-const numberOfBlobs = 40;
-const baseSpeed = 20; //lowest speed every blob recieves
+const numberOfBlobs = 20;
+const baseSpeed = 10; //lowest speed every blob recieves
 const sizeVariance = 75;
 let blobs = []; //all the blob objects
 let blobElements = []; //all the temporary dom blobs
@@ -152,7 +152,7 @@ class Hero extends Component {
                     &nbsp;
                 </div>
                 <div className="main-content" id="blob-container">
-                    <p className="myname blur">
+                    <p className="myname">
                         <b>Brandon Norsworthy</b>
                     </p>
                     {createBlobs()}

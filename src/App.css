@@ -199,7 +199,7 @@ section div h1 {
 	margin-top: 30vh;
 	width: 50%;
 	font-size: 18px;
-	z-index: 25	;
+	z-index: 25;
 }
 
 #about-header {
@@ -241,8 +241,7 @@ footer {
 	justify-content: center;
 }
 
-footer p,
-footer a {
+footer p, footer a {
 	color: var(--white-color);
 	text-align: center;
 	text-decoration: none;
@@ -253,4 +252,21 @@ footer a {
 footer a {
 	font-weight: bold;
 	color: var(--primary-color);
+}
+
+@media only screen and (max-width: 600px) {
+	.j-s {
+		display: none;
+	}
+
+	.j-e {
+		justify-content: center;
+		height: 35px;
+		width: 100%;
+	}
+
+	#extra-content {
+		display: none;
+	}
+
 }

@@ -38,7 +38,7 @@ function Projects() {
             </div>
             <div className="projects-container">
                 {projects.map((project, i) => (
-                    <div className="project" key={i} >
+                    <div className={`project ${project.mobile ? '' : 'not-mobile-resposive'}`} key={i} >
                         <h1>{formatName(project.name)}</h1>
                         <img src={images[findImage(project.name)].default} alt="project demo screenshot"></img>
                         <div>
