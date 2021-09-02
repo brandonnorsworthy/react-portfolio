@@ -13,9 +13,6 @@ function App() {
         <Hero />
         <Projects />
         <About />
-        <footer>
-          <p>Made with 🧠 Power by <a href="https://github.com/brandonnorsworthy/react-portfolio" target="_blank" rel="noreferrer">Brandon Norsworthy</a></p>
-        </footer>
       </main>
     </div>
   );
