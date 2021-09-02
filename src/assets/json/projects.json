@@ -1,87 +1,52 @@
 [
     {
-        "name": "portfolio-website",
-        "description": "Personal portfolio capturing all my projects with in-depth descriptions of projects!",
-        "deployment": "https://brandonnorsworthy.github.io/portfolio-website/",
-        "repository": "https://github.com/brandonnorsworthy/portfolio-website"
+        "name": "eridium",
+        "description": "",
+        "deployment": "https://eridium.herokuapp.com/",
+        "repository": "https://github.com/brandonnorsworthy/eridium"
     },
     {
-        "name": "uta-password-generator",
-        "description": "Generates random passwords built using characters based on criteria that was selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript!",
-        "deployment": "https://brandonnorsworthy.github.io/uta-password-generator/",
-        "repository": "https://github.com/brandonnorsworthy/uta-password-generator"
+        "name": "uta-pwa-budget-tracker",
+        "description": "",
+        "deployment": "https://uta-budget-tracker.herokuapp.com/",
+        "repository": "https://github.com/brandonnorsworthy/uta-pwa-budget-tracker"
     },
     {
-        "name": "uta-code-quiz",
-        "description": "Timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript.",
-        "deployment": "https://brandonnorsworthy.github.io/uta-code-quiz/",
-        "repository": "https://github.com/brandonnorsworthy/uta-code-quiz"
+        "name": "uta-fitness-tracker",
+        "description": "View, create and track daily workouts. Able to log multiple exercises in a workout on a given day. Also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, able to track my distance traveled.",
+        "deployment": "https://uta-fitness-tracker.herokuapp.com",
+        "repository": "https://github.com/brandonnorsworthy/uta-fitness-tracker"
     },
     {
-        "name": "uta-work-day-schduler",
-        "description": "Simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app runs in the browser and feature dynamically updated HTML and CSS powered by jQuery. ",
+        "name": "meet-up",
+        "description": "Meet Up is a full stack web application that can be used to create events anywhere in the world or just browse current events going on. You can create a small event anywhere to try and make new friends or create just a micro event!",
+        "deployment": "https://uta-meet-up.herokuapp.com/",
+        "repository": "https://github.com/brandonnorsworthy/meet-up"
+    },
+    {
+        "name": "uta-e-commerce-back-end",
+        "description": "Back end for an e-commerce site built by adding on top of starter code. Configured a working Express.js API to use Sequelize to interact with a MySQL database.",
         "technologies": [
             "javascript",
-            "css",
-            "jquery",
-            "calendar",
-            "localstorage"
+            "mysql",
+            "express",
+            "routing",
+            "sequelize",
+            "backend-server"
         ],
-        "deployment": "https://brandonnorsworthy.github.io/uta-work-day-schduler/",
-        "repository": "https://github.com/brandonnorsworthy/uta-work-day-schduler"
+        "repository": "https://github.com/brandonnorsworthy/uta-e-commerce-back-end"
     },
     {
-        "name": "uta-weather-dashboard",
-        "description": "Weather Dashboard using Open Weather API that runs in the browser and features dynamically updated HTML and CSS.",
+        "name": "uta-employee-tracker",
+        "description": "This application uses an Express.js back end and saves and retrieves note data from a JSON file. Giving the front-end routes to the backend to send and receive data.",
         "technologies": [
-            "javascript",
-            "bootstrap",
-            "localstorage",
-            "openweather-api",
-            "onecallapi"
-        ],
-        "deployment": "https://brandonnorsworthy.github.io/uta-weather-dashboard/",
-        "repository": "https://github.com/brandonnorsworthy/uta-weather-dashboard"
-    },
-    {
-        "name": "pet-seeker",
-        "description": "Pet Seeker is a user-friendly website that can help you find your new four-legged friend! The site searches the web to bring thousands of adoptable pets right to users' fingertips. Then, users can like or dislike these pets, thereby creating a shortlist of their liked pets.",
-        "technologies": [
-            "css",
-            "jquery",
-            " js",
-            "bulma-css-framework",
-            "petfinder-api",
-            "dogapi"
-        ],
-        "deployment": "https://brandonnorsworthy.github.io/pet-seeker/",
-        "repository": "https://github.com/brandonnorsworthy/pet-seeker"
-    },
-    {
-        "name": "uta-readme-generator",
-        "description": "You can quickly and easily create a README file by using a command-line application to generate one. This allows the project creator to devote more time to working on the project.",
-        "technologies": [
-            "markdown",
-            "node",
-            "fs",
-            "inquirer",
-            "generated"
-        ],
-        "repository": "https://github.com/brandonnorsworthy/uta-readme-generator"
-    },
-    {
-        "name": "uta-team-profile-generator",
-        "description": "Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person",
-        "technologies": [
-            "css",
-            "html",
-            "node",
-            "jest",
-            "classes",
+            "nodejs",
+            "mysql",
+            "express",
+            "sequelize",
             "inquirer"
         ],
-        "deployment": "https://brandonnorsworthy.github.io/uta-team-profile-generator/",
-        "repository": "https://github.com/brandonnorsworthy/uta-team-profile-generator"
+        "repository": "https://github.com/brandonnorsworthy/uta-employee-tracker"
     },
     {
         "name": "uta-note-taker",
@@ -98,52 +63,87 @@
         "repository": "https://github.com/brandonnorsworthy/uta-note-taker"
     },
     {
-        "name": "uta-employee-tracker",
-        "description": "This application uses an Express.js back end and saves and retrieves note data from a JSON file. Giving the front-end routes to the backend to send and receive data.",
+        "name": "uta-team-profile-generator",
+        "description": "Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person",
         "technologies": [
-            "nodejs",
-            "mysql",
-            "express",
-            "sequelize",
+            "css",
+            "html",
+            "node",
+            "jest",
+            "classes",
             "inquirer"
         ],
-        "repository": "https://github.com/brandonnorsworthy/uta-employee-tracker"
+        "deployment": "https://brandonnorsworthy.github.io/uta-team-profile-generator/",
+        "repository": "https://github.com/brandonnorsworthy/uta-team-profile-generator"
     },
     {
-        "name": "uta-e-commerce-back-end",
-        "description": "Back end for an e-commerce site built by adding on top of starter code. Configured a working Express.js API to use Sequelize to interact with a MySQL database.",
+        "name": "uta-readme-generator",
+        "description": "You can quickly and easily create a README file by using a command-line application to generate one. This allows the project creator to devote more time to working on the project.",
+        "technologies": [
+            "markdown",
+            "node",
+            "fs",
+            "inquirer",
+            "generated"
+        ],
+        "repository": "https://github.com/brandonnorsworthy/uta-readme-generator"
+    },
+    {
+        "name": "pet-seeker",
+        "description": "Pet Seeker is a user-friendly website that can help you find your new four-legged friend! The site searches the web to bring thousands of adoptable pets right to users' fingertips. Then, users can like or dislike these pets, thereby creating a shortlist of their liked pets.",
+        "technologies": [
+            "css",
+            "jquery",
+            " js",
+            "bulma-css-framework",
+            "petfinder-api",
+            "dogapi"
+        ],
+        "deployment": "https://brandonnorsworthy.github.io/pet-seeker/",
+        "repository": "https://github.com/brandonnorsworthy/pet-seeker"
+    },
+    {
+        "name": "uta-weather-dashboard",
+        "description": "Weather Dashboard using Open Weather API that runs in the browser and features dynamically updated HTML and CSS.",
         "technologies": [
             "javascript",
-            "mysql",
-            "express",
-            "routing",
-            "sequelize",
-            "backend-server"
+            "bootstrap",
+            "localstorage",
+            "openweather-api",
+            "onecallapi"
         ],
-        "repository": "https://github.com/brandonnorsworthy/uta-e-commerce-back-end"
+        "deployment": "https://brandonnorsworthy.github.io/uta-weather-dashboard/",
+        "repository": "https://github.com/brandonnorsworthy/uta-weather-dashboard"
     },
     {
-        "name": "uta-tech-blog",
-        "description": "",
-        "technologies": [],
-        "repository": "https://github.com/brandonnorsworthy/uta-tech-blog"
+        "name": "uta-work-day-schduler",
+        "description": "Simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app runs in the browser and feature dynamically updated HTML and CSS powered by jQuery. ",
+        "technologies": [
+            "javascript",
+            "css",
+            "jquery",
+            "calendar",
+            "localstorage"
+        ],
+        "deployment": "https://brandonnorsworthy.github.io/uta-work-day-schduler/",
+        "repository": "https://github.com/brandonnorsworthy/uta-work-day-schduler"
     },
     {
-        "name": "meet-up",
-        "description": "Meet Up is a full stack web application that can be used to create events anywhere in the world or just browse current events going on. You can create a small event anywhere to try and make new friends or create just a micro event!",
-        "deployment": "https://uta-meet-up.herokuapp.com/",
-        "repository": "https://github.com/brandonnorsworthy/meet-up"
+        "name": "uta-code-quiz",
+        "description": "Timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript.",
+        "deployment": "https://brandonnorsworthy.github.io/uta-code-quiz/",
+        "repository": "https://github.com/brandonnorsworthy/uta-code-quiz"
     },
     {
-        "name": "uta-fitness-tracker",
-        "description": "View, create and track daily workouts. Able to log multiple exercises in a workout on a given day. Also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, able to track my distance traveled.",
-        "deployment": "https://uta-fitness-tracker.herokuapp.com",
-        "repository": "https://github.com/brandonnorsworthy/uta-fitness-tracker"
+        "name": "uta-password-generator",
+        "description": "Generates random passwords built using characters based on criteria that was selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript!",
+        "deployment": "https://brandonnorsworthy.github.io/uta-password-generator/",
+        "repository": "https://github.com/brandonnorsworthy/uta-password-generator"
     },
     {
-        "name": "uta-pwa-budget-tracker",
-        "description": "",
-        "deployment": "https://uta-budget-tracker.herokuapp.com/",
-        "repository": "https://github.com/brandonnorsworthy/uta-pwa-budget-tracker"
+        "name": "portfolio-website",
+        "description": "Personal portfolio capturing all my projects with in-depth descriptions of projects!",
+        "deployment": "https://brandonnorsworthy.github.io/portfolio-website/",
+        "repository": "https://github.com/brandonnorsworthy/portfolio-website"
     }
 ]

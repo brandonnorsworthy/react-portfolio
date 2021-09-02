@@ -127,7 +127,7 @@ section {
 .projects-container {
 	display: flex;
 	justify-content: center;
-	max-width: 100vh;
+	max-width: 100vw;
 	margin-left: 10%;
 	margin-right: 10%;
 	flex-wrap: wrap;
@@ -176,10 +176,34 @@ section div h1 {
 
 .about {
 	background-color: var(--secondary-color);
+	display: flex;
+	justify-content: center;
 }
 
 .about-content {
+	color: var(--white-color);
 	margin-top: 30vh;
+	width: 50%;
+	font-size: 18px;
+}
+
+#about-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#about-header h1 {
+	margin-left: 50px;
+}
+
+#profile {
+	width: 250px;
+	border-radius: 50%;
+}
+
+.about-content img {
+	width: 40px;
 }
 
 footer {
@@ -189,10 +213,16 @@ footer {
 	justify-content: center;
 }
 
+footer p,
 footer a {
 	color: var(--white-color);
 	text-align: center;
 	text-decoration: none;
 	width: 100%;
 	margin-bottom: 10px;
+}
+
+footer a {
+	font-weight: bold;
+	color: var(--primary-color);
 }

@@ -14,7 +14,7 @@ function App() {
         <Projects />
         <About />
         <footer>
-          <a href="https://github.com/brandonnorsworthy/react-portfolio" target="_blank" rel="noreferrer" >Made with 🧠 Power by Brandon Norsworthy</a>
+          <p>Made with 🧠 Power by <a href="https://github.com/brandonnorsworthy/react-portfolio" target="_blank" rel="noreferrer">Brandon Norsworthy</a></p>
         </footer>
       </main>
     </div>
