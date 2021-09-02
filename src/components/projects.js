@@ -34,7 +34,7 @@ function Projects() {
     return (
         <section className="projects" id="projects">
             <div>
-                <h1>Projects</h1>
+                <h1>My Work</h1>
             </div>
             <div className="projects-container">
                 {projects.map((project, i) => (

@@ -3,7 +3,6 @@ import Header from './components/header'
 import Hero from './components/hero'
 import Projects from './components/projects'
 import About from './components/about'
-import Sandbox from './components/sandbox'
 
 
 function App() {
@@ -14,7 +13,9 @@ function App() {
         <Hero />
         <Projects />
         <About />
-        <Sandbox />
+        <footer>
+          <a href="https://github.com/brandonnorsworthy/react-portfolio" target="_blank" rel="noreferrer" >Made with 🧠 Power by Brandon Norsworthy</a>
+        </footer>
       </main>
     </div>
   );
