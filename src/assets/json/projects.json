@@ -123,7 +123,8 @@
             "onecallapi"
         ],
         "deployment": "https://brandonnorsworthy.github.io/uta-weather-dashboard/",
-        "repository": "https://github.com/brandonnorsworthy/uta-weather-dashboard"
+        "repository": "https://github.com/brandonnorsworthy/uta-weather-dashboard",
+        "mobile": "false"
     },
     {
         "name": "uta-work-day-schduler",

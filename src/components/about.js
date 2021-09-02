@@ -16,7 +16,7 @@ function Projects() {
                     <img id="profile" src={zipline} alt="me ziplining during lonestar leadership college retreat"></img>
                     <h1>Brandon Norsworthy</h1>
                 </div>
-                <p>Hello, I am Brandon</p>
+                <p>Hello, I am Brandon. I am a Web Developer</p>
                 <p>Being a Full Stack developer, everyday, I refine my skills from sketching out front-end design to building the database schema. Before going to the University of Texas, I studied Computer Science at the University of Houston, gaining a deeper level in understanding low level programming. During the time I spent at the University of Texas obtaining my Certificate for Full Stack Web Development, I worked on many projects even outside the required coursework, still maintaining the ability to stay on track.  I also developed skills in Front End and Backend using React, NodeJS, MySQL and MongoDB. I am motivated to continue learning anything and everything within the scope of this career path. </p>
                 <p>I am familiar with these technologies/languages: </p>
                 <p>HTML, CSS, JavaScript, jQuery, Jest, AJAX, MySQL, Node.js, MongoDB, React, Python, C++, Java</p>
