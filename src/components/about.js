@@ -3,7 +3,7 @@ import zipline from '../assets/pictures/zipline.png'
 import linkedin from '../assets/icons/linkedin.png'
 import github from '../assets/icons/github.png'
 
-function Projects() {
+function About() {
     return (
         <section className="about" id="about">
             <div className="spacer">
@@ -39,4 +39,4 @@ function Projects() {
     )
 }
 
-export default Projects
+export default About
